@@ -10,8 +10,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.nadia.raconte_moi.MainActivity">
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:inputType="textPersonName"
+        android:text="User"
+        android:ems="10"
+        android:layout_above="@+id/psw"
+        android:layout_alignEnd="@+id/psw"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/user" />
+
+    <Button
+        android:text="Ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok"
+        android:layout_below="@+id/psw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/psw"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Your passowrd" />
+
 </RelativeLayout>
