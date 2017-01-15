@@ -1,4 +1,4 @@
-package com.example.nadia.raconte_moi;
+package com.example.benzait27.raconte_moi;
 
 import org.junit.Test;
 

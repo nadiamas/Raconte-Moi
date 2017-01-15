@@ -1,4 +1,4 @@
-package com.example.nadia.raconte_moi;
+package com.example.benzait27.raconte_moi;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.nadia.raconte_moi", appContext.getPackageName());
+        assertEquals("com.example.benzait27.raconte_moi", appContext.getPackageName());
     }
 }
