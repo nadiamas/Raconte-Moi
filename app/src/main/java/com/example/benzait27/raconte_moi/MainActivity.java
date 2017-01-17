@@ -1,4 +1,4 @@
-package com.example.benzait27.raconteMoi;
+package com.example.benzait27.raconte_moi;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.example.benzait27.raconte_moi.R;
 
 public class MainActivity extends AppCompatActivity {
 
