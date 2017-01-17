@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
                 EditText user = (EditText) findViewById(R.id.user);
                 EditText psw = (EditText) findViewById(R.id.psw);
-                if (user.getText().equals("zaki")&& psw.getText().equals("zaki") )
+                if ("zaki".equals(user.getText())&& "zaki".equals(psw.getText()) )
                 {
                     Toast.makeText(getApplicationContext(), "successful authentication",Toast.LENGTH_SHORT).show();
                 }
