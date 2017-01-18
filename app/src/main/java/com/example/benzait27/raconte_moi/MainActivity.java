@@ -10,15 +10,13 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
-
+/***** Ceci est un test *****/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button ok = (Button) findViewById(R.id.ok);
-
-       // Button ok = (Button) findViewById(R.id.ok);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
