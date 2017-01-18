@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //effacer le point virgule  de la fin
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main);
 
         Button ok = (Button) findViewById(R.id.ok);
 
