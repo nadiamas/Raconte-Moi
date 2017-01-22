@@ -48,10 +48,19 @@
         android:orientation="horizontal">
 
         <Button
-            android:text="TestSlack"
+        android:text="TestSlack2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        android:layout_below="@+id/psw"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+        <Button
+            android:text="TestSlack2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/test"
+            android:id="@+id/test2"
             android:layout_below="@+id/psw"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp" />
