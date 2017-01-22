@@ -29,6 +29,11 @@ $> ./gradlew sonarqube
 # Déploiement 
 Nous pouvons Play Store qui permettra de télécharger sur des périphériques mobiles compatibles avec Android.... A continuer
 
+#Diagramme de classe
+<p align="center">
+  <img src="DiagrammeDeClasse.png" width="350"/>
+</p>
+
 # Date
 Le 17 Janvier 2017
 
