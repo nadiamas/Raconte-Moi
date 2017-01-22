@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
+            // generer la documentation de cette fonction
             public void onClick(View view) {
 
                 EditText user = (EditText) findViewById(R.id.user);
