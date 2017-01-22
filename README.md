@@ -31,7 +31,7 @@ Nous pouvons Play Store qui permettra de télécharger sur des périphériques m
 
 #Diagramme de classe
 <p align="center">
-  <img src="DiagrammeDeClasse.png" width="350" height: 100px/>
+  <img src="DiagrammeDeClasse.png" width="350" height="400"/>
 </p>
 
 # Date
