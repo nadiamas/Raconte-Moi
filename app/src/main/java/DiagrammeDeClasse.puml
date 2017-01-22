@@ -1,0 +1,129 @@
+@startuml
+
+BDDManager <- LoginInterface
+
+class LoginInterface {
+ login(pws:String, userName: String)
+ subscribe()
+}
+BDDManager <- parentManager
+
+class BDDManager {
+
+ checkUser(pws:String, userName: String):boolean
+ getParentProfil(userName: String):Parent
+}
+BDDManager <- Parent
+
+class ParentManager {
+
+ displayUser(parent: Parent)
+ edit(parent: Parent):Parent
+ addKid():Kids
+ displayReport(kids: Kids):File
+ accessActivity(kids: Kids): ActivityManager
+}
+ActivityManager <- ParentManager
+
+BDDManager <- KidsManager
+
+class KidsManager {
+
+ displayUser(kids: Kids)
+ edit(kids: Kids):Kids
+}
+BDDManager <- ActivityManager
+
+class Parent {
+  firstName: String
+  lastName: String
+  email: String
+  kids[]: Kids
+
+ }
+ BDDManager <- ActivityManager
+
+class  Kids {
+   firstName: String
+   lastName: String
+   photoPath: String
+   age: int
+  }
+  ReportManager <- ParentManager
+
+class SubscribeManager {
+
+  creatProfil(firstName: String, lastName: String, email: String): Parent
+}
+
+class ReportManager {
+
+  displayReport(kids: Kids):File
+  download(file: File)
+  print(file: File)
+}
+
+class ReadingManager {
+
+  category[]: Category
+  displayCategory(category[]: Category)
+  displayStory(category: Category)
+  startReading(story: Story)
+  stopReading(story: Story): Time
+  readAuto(story: Story): Audio
+}
+
+class ActivityManager {
+
+}
+
+class WritingManager {
+
+}
+class WritingImageManager {
+  category[]: Category
+  displayCategory(category[]: Category)
+  displayImages(category: Category)
+  chooseImages(images[]: Image)
+  saving(images[]: Image, text: String, kids: Kids): Story
+  displayCorection()
+  share(story: Story)
+  validation(story: Story)
+}
+class WritingDrawingManager {
+  category[]: Category
+  chooseTools(): Tools
+  chooseImages(images[]: Image)
+  saving(image: Image, text: String, kids: Kids): Story
+  displayCorrection()
+  share(story: Story)
+  validation(story: Story)
+}
+enum Tools {
+pen
+}
+class ValidationManager {
+
+  checkError(text: string): String
+}
+class Story {
+
+  String imagesPath[]
+  text: String
+}
+class Category {
+  stories[]: Story
+}
+
+SubscribeManager <- LoginInterface
+    ActivityManager <|- WritingManager
+    ActivityManager <|- ReadingManager
+    WritingManager <|- WritingDrawingManager
+    WritingManager <|- WritingImageManager
+    ValidationManager <- WritingManager
+    Category *-- Story
+    Story <- BDDManager
+    Category <- BDDManager
+    Parent<- BDDManager
+    Kids <- BDDManager
+@enduml
