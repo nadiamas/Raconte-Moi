@@ -1,12 +1,11 @@
 @startuml
 
-BDDManager <- LoginInterface
+
 
 class LoginInterface {
  login(pws:String, userName: String)
  subscribe()
 }
-BDDManager <- parentManager
 
 
 class BDDManager {
@@ -14,7 +13,6 @@ class BDDManager {
  checkUser(pws:String, userName: String):boolean
  getParentProfil(userName: String):Parent
 }
-BDDManager <- Parent
 
 class ParentManager {
 
@@ -24,16 +22,13 @@ class ParentManager {
  displayReport(kids: Kids):File
  accessActivity(kids: Kids): ActivityManager
 }
-ActivityManager <- ParentManager
 
-BDDManager <- KidsManager
 
 class KidsManager {
 
  displayUser(kids: Kids)
  edit(kids: Kids):Kids
 }
-BDDManager <- ActivityManager
 
 class Parent {
   firstName: String
@@ -42,7 +37,7 @@ class Parent {
   kids[]: Kids
 
  }
- BDDManager <- ActivityManager
+
 
 class  Kids {
    firstName: String
@@ -50,7 +45,6 @@ class  Kids {
    photoPath: String
    age: int
   }
-  ReportManager <- ParentManager
 
 class SubscribeManager {
 
@@ -117,14 +111,23 @@ class Category {
 }
 
 SubscribeManager <- LoginInterface
-    ActivityManager <|- WritingManager
-    ActivityManager <|- ReadingManager
-    WritingManager <|- WritingDrawingManager
-    WritingManager <|- WritingImageManager
-    ValidationManager <- WritingManager
-    Category *-- Story
-    Story <- BDDManager
-    Category <- BDDManager
-    Parent<- BDDManager
-    Kids <- BDDManager
+ActivityManager <|-down- WritingManager
+ActivityManager <|-down- ReadingManager
+WritingManager <|-down- WritingDrawingManager
+WritingManager <|- WritingImageManager
+ValidationManager <- WritingManager
+Category *-left- Story
+Parent *-left- Kids
+Story <- BDDManager
+Category <- BDDManager
+Parent <- BDDManager
+Kids <- BDDManager
+ReportManager <--right- ParentManager
+BDDManager <- ActivityManager
+BDDManager <-up- parentManager
+BDDManager <--down- LoginInterface
+BDDManager <--up- KidsManager
+ActivityManager <- ParentManager
+KidsManager <-left- ParentManager
+
 @enduml
