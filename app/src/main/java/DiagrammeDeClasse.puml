@@ -8,6 +8,7 @@ class LoginInterface {
 }
 BDDManager <- parentManager
 
+
 class BDDManager {
 
  checkUser(pws:String, userName: String):boolean
