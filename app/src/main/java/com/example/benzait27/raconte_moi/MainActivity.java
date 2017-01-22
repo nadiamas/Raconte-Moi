@@ -15,9 +15,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Button ok = (Button) findViewById(R.id.ok);
-
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +30,7 @@ public class MainActivity extends Activity {
                 {
                     Toast.makeText(getApplicationContext(), "failure authentication",Toast.LENGTH_SHORT).show();
                 }
-                // Do what you want here...
+
             }
         });
 
