@@ -12,6 +12,7 @@
     - android-sdk-preview-license-52d11cd2
     - android-sdk-license-.+
     - google-gdk-license-.+
+sudo: required
 before_script: 
   - "android update sdk --no-ui --filter build-tools-24.0.1,android-24,extra-android-m2repository"
   - "echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a"
