@@ -10,5 +10,7 @@ public class Lecture extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lecture);
         // thisactivty for writing
+        // all wahat we need to realse this
+        // hre just a test 
     }
 }
