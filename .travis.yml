@@ -42,5 +42,5 @@ before_script:
 before_install:
  - chmod +x gradlew
 script:
-  - ./gradlew build connectedCheck
+ - ./gradlew connectedAndroidTest coveralls
 
