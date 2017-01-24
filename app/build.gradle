@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'org.sonarqube'
 apply plugin: 'com.github.kt3k.coveralls'
 
 android {
