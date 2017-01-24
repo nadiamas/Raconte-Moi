@@ -1,0 +1,5 @@
+projectKey=Raconte-Moi
+serverUrl=http://localhost:9000
+dashboardUrl=http://localhost:9000/dashboard/index/Raconte-Moi
+ceTaskId=AVnQQ_28vXIZ-e7vesX2
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AVnQQ_28vXIZ-e7vesX2
