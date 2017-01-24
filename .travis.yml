@@ -1,8 +1,21 @@
 language: android
+jdk: oraclejdk8
+# Use the Travis Container-Based Infrastructure
 sudo: false
-android: 
-  components: 
-  - tools
+
+env:
+  global:
+    # - ANDROID_TARGET=android-22
+    # - ANDROID_ABI=armeabi-v7a
+    - ANDROID_API_LEVEL=23
+    - EMULATOR_API_LEVEL=21
+    - ANDROID_BUILD_TOOLS_VERSION=23.0.2
+    - ANDROID_ABI=armeabi-v7a
+    - ANDROID_TAG=google_apis
+    - ADB_INSTALL_TIMEOUT=20 # minutes (2 minutes by default)
+android:
+  components:
+    - tools
     - platform-tools
     - build-tools-$ANDROID_BUILD_TOOLS_VERSION
     # Specify both versions to resolve issue with missing image from google repository
@@ -15,18 +28,18 @@ android:
     # Image 23 might be missing from google repository
     - sys-img-armeabi-v7a-google_apis-$ANDROID_API_LEVEL
     - sys-img-armeabi-v7a-google_apis-$EMULATOR_API_LEVEL
-  licenses: 
+  licenses:
     - 'android-sdk-preview-license-.+'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
-before_script: 
+
+# Launch android emulator and wait for it
+before_script:
     - echo no | android create avd --force -n test -t "android-"$EMULATOR_API_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
     - emulator -avd test -no-skin -no-audio -no-window &
     - android-wait-for-emulator
     - adb shell input keyevent 82 &
-before_install: 
-  - "chmod +x gradlew"
-jdk: oraclejdk8
-script: 
-  - "./gradlew build connectedCheck --stacktrace"
-  
+
+script:
+  - ./gradlew connectedAndroidTest coveralls
+
