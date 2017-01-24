@@ -17,6 +17,7 @@ Les outils à mettre en place pour le développements de l'application sont:
 - Sonarqube
 - Trello
 
+
 # Pose
 Notre application sera sur Android Studio qui s'utilise assez facilement. Pour lancer le programme il faut cliquer sur un bouton RUN
 
