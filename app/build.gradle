@@ -18,12 +18,7 @@ android {
         }
     }
 }
-android {
-  dexOptions {
-     // Skip pre-dexing when running on Travis CI or when disabled via -Dpre-dex=false.
-     preDexLibraries = preDexEnabled && !travisBuild
-   }
- }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
