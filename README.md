@@ -2,6 +2,8 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e795fe9afb88426f9c7f1f4fba2852aa)](https://www.codacy.com/app/benzait27/Raconte-Moi?utm_source=github.com&utm_medium=referral&utm_content=benzait27/Raconte-Moi&utm_campaign=badger)
 
+[![Coverage Status](https://coveralls.io/repos/github/benzait27/Raconte-Moi/badge.svg?branch=master)](https://coveralls.io/github/benzait27/Raconte-Moi?branch=master)
+
 <a href="https://travis-ci.org/benzait27/Raconte-Moi"><img src="https://camo.githubusercontent.com/bb58d1a4f446a5071e1fd055515f5178e735479a/68747470733a2f2f7472617669732d63692e6f72672f426f7571756574322f4173736f47656e64612e7376673f6272616e63683d6d6173746572" alt="Build Status" data-canonical-src="https://travis-ci.org/benzait27/Raconte-Moi.svg?branch=master" style="max-width:100%;"></a>
 
 Raconte-moi est une super application destinée aux nos enfants entre 8 ans et 11 ans qui souhaitent améliorer leur lecture et écriture.
