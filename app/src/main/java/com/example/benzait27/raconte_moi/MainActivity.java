@@ -9,7 +9,7 @@ import android.view.View;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-
+ // all the code should be in english
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
