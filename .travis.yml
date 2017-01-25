@@ -43,5 +43,3 @@ before_install:
  - chmod +x gradlew
 script:
  - ./gradlew connectedAndroidTest coveralls
-after_success:
-  - gradle jacocoTestReport coveralls
