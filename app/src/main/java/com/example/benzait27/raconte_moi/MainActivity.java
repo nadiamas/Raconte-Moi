@@ -15,26 +15,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button ok = (Button) findViewById(R.id.ok);
-
-        ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            // generer la documentation de cette fonction
-            public void onClick(View view) {
-
-                EditText user = (EditText) findViewById(R.id.user);
-                EditText psw = (EditText) findViewById(R.id.psw);
-                if ("zaki".equals(user.getText())&& "zaki".equals(psw.getText()) )
-                {
-                    Toast.makeText(getApplicationContext(), "successful authentication",Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "failure authentication",Toast.LENGTH_SHORT).show();
-                }
-                // Do what you want here...
-            }
-        });
 
     }
 }
