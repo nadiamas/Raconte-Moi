@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    tools:context="com.example.benzait27.raconte_moi.Inscription">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Civilité"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/civilite"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Nom"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Prenom"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Nombre d'enfant"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/nbrenfant"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Mail"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Nom d'utilisateur"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/nomutilisateur"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Mot de passe"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/motdepasse"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/enregitre"
+        android:text="Enregistrer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
