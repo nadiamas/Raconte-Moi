@@ -4,41 +4,54 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context="com.example.benzait27.raconte_moi.Inscription">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Civilité"
-        android:layout_height="wrap_content" />
+    android:padding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:text="Nom"
         android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Prenom"
+    <EditText
+        android:id="@+id/etNom"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
         android:layout_height="wrap_content" />
 
     <TextView
         android:layout_width="wrap_content"
         android:text="Nombre d'enfant"
         android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Mail"
+    <EditText
+        android:id="@+id/EtNbreEnfant"
+        android:layout_width="match_parent"
+        android:inputType="number"
+        android:layout_marginBottom="10dp"
         android:layout_height="wrap_content" />
 
     <TextView
         android:layout_width="wrap_content"
         android:text="Nom d'utilisateur"
         android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etNomUtilisateur"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:text="MOt de passe"
+        android:text="Mot de passe"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etMotDePasse"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bEnregistre"
+        android:text="Enregistrer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
