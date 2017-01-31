@@ -37,6 +37,7 @@ public class Authentification extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.tvEnregistrerLink:
+                //Refresh
                 startActivity(new Intent(this, Inscription.class));
                 break;
         }
