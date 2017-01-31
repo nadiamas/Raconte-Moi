@@ -8,8 +8,8 @@ import android.widget.EditText;
 
 public class Inscription extends AppCompatActivity implements View.OnClickListener {
 
-    EditText etNom, etPrenom, etNbreEnfant, etMail, etNomUtilisateur, etMotDePasse;
-    Button bInscription;
+    Button bEnregister;
+    EditText etNom, etNbreEnfant, etNomUtilisateur, etMotDePasse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,21 +17,19 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_inscription);
 
         etNom = (EditText)findViewById(R.id.etNom);
-        etPrenom = (EditText)findViewById(R.id.etPrenom);
         etNbreEnfant = (EditText)findViewById(R.id.etNbreEnfant);
-        etMail = (EditText)findViewById(R.id.etMail);
         etNomUtilisateur = (EditText)findViewById(R.id.etNomUtilisateur);
         etMotDePasse = (EditText)findViewById(R.id.etMotDePasse);
-        bInscription = (Button)findViewById(R.id.bInscription);
+        bEnregister = (Button)findViewById(R.id.bEnregistre);
 
-        bInscription.setOnClickListener(this);
+        bEnregister.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.bInscription:
-                //redirection vers le menu
+            case R.id.bEnregistre:
+
                 break;
         }
     }
