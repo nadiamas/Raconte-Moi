@@ -13,6 +13,7 @@ env:
     - ANDROID_ABI=armeabi-v7a
     - ANDROID_TAG=google_apis
     - ADB_INSTALL_TIMEOUT=20 # minutes (2 minutes by default)
+    - CODACY_PROJECT_TOKEN=7636207b88cc47fb94cdef879a486ed8
 android:
   components:
     - tools
@@ -41,5 +42,13 @@ before_script:
     - adb shell input keyevent 82 &
 before_install:
  - chmod +x gradlew
+ # add configuration to see Tavis report  on codacy
+ - curl -sL https://github.com/jpm4j/jpm4j.installers/raw/master/dist/biz.aQute.jpm.run.jar >jpm4j.jar
+ - java -jar jpm4j.jar -u init
+ - ~/jpm/bin/jpm install com.codacy:codacy-coverage-reporter:assembly
 script:
  - ./gradlew connectedAndroidTest coveralls
+ #- ./gradlew check jacocoTestReport coveralls
+after_success:
+ - ~/jpm/bin/codacy-coverage-reporter -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
+ 
