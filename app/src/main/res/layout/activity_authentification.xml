@@ -4,28 +4,8 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:padding="10dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Nom"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/etNom"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Nombre d'enfant"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/etNbreEnfant"
-        android:layout_width="match_parent"
-        android:inputType="number"
-        android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content" />
+    android:padding="10dp"
+    tools:context="com.example.benzait27.raconte_moi.Authentification">
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,11 +17,30 @@
         android:layout_marginBottom="10dp"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Mot de passe"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etMotDePasse"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/bDeconnecter"
-        android:text="Déconnecter"
+        android:id="@+id/bSoumettre"
+        android:text="Soumettre"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvEnregistrerLink"
+        android:layout_width="wrap_content"
+        android:text="Nom d'utilisateur incorrect"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
