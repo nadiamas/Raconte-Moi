@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -190,39 +191,46 @@ public class WritingDrawingManager extends AppCompatActivity implements View.OnC
             });
             newDialog.show();
         }
-        else if(view.getId()==R.id.save_btn){
+        else if(view.getId()==R.id.save_btn) {
             //save drawing
-            AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
-            saveDialog.setTitle("Save drawing");
-            saveDialog.setMessage("Save drawing to device Gallery?");
-            saveDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
-                public void onClick(DialogInterface dialog, int which){
-                    //save drawing
-                    drawView.setDrawingCacheEnabled(true);
-                    //attempt to save
-                    String imgSaved = MediaStore.Images.Media.insertImage(
-                            getContentResolver(), drawView.getDrawingCache(),
-                            UUID.randomUUID().toString()+".png", "drawing");
-                    //feedback
-                    if(imgSaved!=null){
-                        Toast savedToast = Toast.makeText(getApplicationContext(),
-                                "Drawing saved to Gallery!", Toast.LENGTH_SHORT);
-                        savedToast.show();
+            EditText para = (EditText) findViewById(R.id.paragraph);
+            if (para.getText().toString().trim().length() != 0) {
+                AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
+                saveDialog.setTitle("Save drawing");
+                saveDialog.setMessage("Save drawing to device Gallery?");
+                saveDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        //save drawing
+                        drawView.setDrawingCacheEnabled(true);
+                        //attempt to save
+                        String imgSaved = MediaStore.Images.Media.insertImage(
+                                getContentResolver(), drawView.getDrawingCache(),
+                                UUID.randomUUID().toString() + ".png", "drawing");
+                        //feedback
+                        if (imgSaved != null) {
+                            Toast savedToast = Toast.makeText(getApplicationContext(),
+                                    "Drawing saved to Gallery!", Toast.LENGTH_SHORT);
+                            savedToast.show();
+                        } else {
+                            Toast unsavedToast = Toast.makeText(getApplicationContext(),
+                                    "Oops! Image could not be saved.", Toast.LENGTH_SHORT);
+                            unsavedToast.show();
+                        }
+                        drawView.destroyDrawingCache();
                     }
-                    else{
-                        Toast unsavedToast = Toast.makeText(getApplicationContext(),
-                                "Oops! Image could not be saved.", Toast.LENGTH_SHORT);
-                        unsavedToast.show();
+                });
+                saveDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
                     }
-                    drawView.destroyDrawingCache();
-                }
-            });
-            saveDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener(){
-                public void onClick(DialogInterface dialog, int which){
-                    dialog.cancel();
-                }
-            });
-            saveDialog.show();
+                });
+                saveDialog.show();
+            }
+            else {
+                    Toast unsavedToast = Toast.makeText(getApplicationContext(),
+                            "Oops! you should write a story.", Toast.LENGTH_SHORT);
+                    unsavedToast.show();
+            }
         }
         else if(view.getId()==R.id.opacity_btn){
             //launch opacity chooser
