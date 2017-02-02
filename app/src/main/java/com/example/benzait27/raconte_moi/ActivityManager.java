@@ -13,8 +13,8 @@ public class ActivityManager extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manager);
-        writingBtn = (Button)findViewById(R.id.bEnregistre);
-        readingBtn  = (Button)findViewById(R.id.goActivity);
+        writingBtn = (Button)findViewById(R.id.writingBtn);
+        readingBtn  = (Button)findViewById(R.id.readingBtn);
         writingBtn.setOnClickListener(this);
         readingBtn.setOnClickListener(this);
     }
@@ -22,10 +22,10 @@ public class ActivityManager extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.writingBtn:
-                startActivity(new Intent(this, ReadingManager.class));
+                startActivity(new Intent(this, WritingManager.class));
                 break;
             case R.id.readingBtn:
-                startActivity(new Intent(this, WritingManager.class));
+                startActivity(new Intent(this, ReadingManager.class));
                 break;
         }
     }
