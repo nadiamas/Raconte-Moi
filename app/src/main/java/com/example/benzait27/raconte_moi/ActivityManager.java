@@ -22,10 +22,10 @@ public class ActivityManager extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.writingBtn:
-
+                startActivity(new Intent(this, ReadingManager.class));
                 break;
             case R.id.readingBtn:
-                startActivity(new Intent(this, ActivityManager.class));
+                startActivity(new Intent(this, WritingManager.class));
                 break;
         }
     }
