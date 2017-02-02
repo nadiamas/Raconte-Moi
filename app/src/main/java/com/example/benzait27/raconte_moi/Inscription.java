@@ -36,7 +36,7 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
                 break;
             case R.id.goActivity:
                 startActivity(new Intent(this, ActivityManager.class));
-                break;
+                //break;
         }
     }
 }
