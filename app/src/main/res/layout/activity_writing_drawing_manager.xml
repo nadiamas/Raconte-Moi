@@ -62,7 +62,7 @@
 
         </LinearLayout>
 
-        <com.example.drawingfun.DrawingView
+        <com.example.benzait27.raconte_moi.DrawingView
             android:id="@+id/drawing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
