@@ -2,6 +2,7 @@ package com.example.benzait27.raconte_moi;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -193,7 +194,7 @@ public class WritingDrawingManager extends AppCompatActivity implements View.OnC
         }
         else if(view.getId()==R.id.save_btn) {
             //save drawing
-            EditText para = (EditText) findViewById(R.id.paragraph);
+           final  EditText para = (EditText) findViewById(R.id.paragraph);
             if (para.getText().toString().trim().length() != 0) {
                 AlertDialog.Builder saveDialog = new AlertDialog.Builder(this);
                 saveDialog.setTitle("Save drawing");
@@ -211,6 +212,15 @@ public class WritingDrawingManager extends AppCompatActivity implements View.OnC
                             Toast savedToast = Toast.makeText(getApplicationContext(),
                                     "Drawing saved to Gallery!", Toast.LENGTH_SHORT);
                             savedToast.show();
+
+                            Bundle bundle = new Bundle();
+
+
+                            Intent saveIntent=  new Intent(getApplicationContext(), ResultWriting.class);
+                            bundle.putSerializable("view",(DrawingView) drawView);
+                            bundle.putString("text",para.getText().toString());
+                            saveIntent.putExtras(bundle);
+                            startActivity(saveIntent);
                         } else {
                             Toast unsavedToast = Toast.makeText(getApplicationContext(),
                                     "Oops! Image could not be saved.", Toast.LENGTH_SHORT);

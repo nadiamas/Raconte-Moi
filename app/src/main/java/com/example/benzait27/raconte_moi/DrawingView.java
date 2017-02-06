@@ -18,6 +18,8 @@ import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
+import java.io.Serializable;
+
 /**
  * This is demo code to accompany the Mobiletuts+ tutorial series:
  * - Android SDK: Create a Drawing App
@@ -27,7 +29,7 @@ import android.view.View;
  * August 2013 / September 2013
  *
  */
-public class DrawingView extends View {
+public class DrawingView extends View implements Serializable {
 
     //drawing path
     private Path drawPath;

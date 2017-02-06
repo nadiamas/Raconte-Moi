@@ -32,9 +32,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     // test property config
-    compile 'com.pholser:junit-quickcheck-core:0.7'
-    compile 'com.pholser:junit-quickcheck-generators:0.7'
-    compile 'com.pholser:junit-quickcheck-guava:0.7'
+
     // end of config test property
     testCompile 'junit:junit:4.12'
 }
