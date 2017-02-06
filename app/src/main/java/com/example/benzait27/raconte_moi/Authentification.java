@@ -10,36 +10,43 @@ import android.widget.TextView;
 
 public class Authentification extends AppCompatActivity implements View.OnClickListener {
 
-    Button bSoumettre;
-    EditText nomUtilisateur, motDePasse;
-    TextView tvEnregistrerLink;
+    EditText etNomUtilisateur, etMotDePasse;
+    Button bAuthentification;
+    TextView tvInscriptionLink, tvOubliInfoLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentification);
 
-        nomUtilisateur = (EditText)findViewById(R.id.etNomUtilisateur);
-        motDePasse = (EditText)findViewById(R.id.etMotDePasse);
-        bSoumettre = (Button)findViewById(R.id.bSoumettre);
-        tvEnregistrerLink = (TextView)findViewById(R.id.tvEnregistrerLink);
+        etNomUtilisateur = (EditText)findViewById(R.id.etNomUtilisateur);
+        etMotDePasse = (EditText)findViewById(R.id.etMotDePasse);
+        bAuthentification = (Button)findViewById(R.id.bAuthentification);
+        tvInscriptionLink = (TextView)findViewById(R.id.tvInscriptionLink);
+        tvOubliInfoLink = (TextView)findViewById(R.id.tvOubliInfoLink);
 
-        bSoumettre.setOnClickListener(this);
-        tvEnregistrerLink.setOnClickListener(this);
+        bAuthentification.setOnClickListener(this);
+        tvInscriptionLink.setOnClickListener(this);
+        tvOubliInfoLink.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.bSoumettre:
+            case R.id.bAuthentification:
 
                 break;
 
-            case R.id.tvEnregistrerLink:
+            case R.id.tvInscriptionLink:
                 //Refresh
                 startActivity(new Intent(this, Inscription.class));
                 break;
+            
+            /* info à traiter
+            case R.id.tvOubliInfoLink:
+                break;
+                */
         }
     }
 }
