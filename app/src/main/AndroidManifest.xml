@@ -16,14 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Authentification" />
-        <activity android:name=".Inscription" />
-        <activity android:name=".ActivityManager" />
-        <activity android:name=".WritingManager" />
-        <activity android:name=".ReadingManager" />
-        <activity android:name=".WritingDrawingManager" />
-        <activity android:name=".WritingImageManager" />
-        <activity android:name=".ResultWriting"></activity>
     </application>
 
 </manifest>
