@@ -12,7 +12,7 @@ public class Authentification extends AppCompatActivity implements View.OnClickL
 
     EditText etNomUtilisateur, etMotDePasse;
     Button bAuthentification;
-    TextView tvInscriptionLink, tvOubliInfoLink;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +22,8 @@ public class Authentification extends AppCompatActivity implements View.OnClickL
         etNomUtilisateur = (EditText)findViewById(R.id.etNomUtilisateur);
         etMotDePasse = (EditText)findViewById(R.id.etMotDePasse);
         bAuthentification = (Button)findViewById(R.id.bAuthentification);
-        tvInscriptionLink = (TextView)findViewById(R.id.tvInscriptionLink);
-        tvOubliInfoLink = (TextView)findViewById(R.id.tvOubliInfoLink);
 
         bAuthentification.setOnClickListener(this);
-        tvInscriptionLink.setOnClickListener(this);
-        tvOubliInfoLink.setOnClickListener(this);
 
     }
 
@@ -37,16 +33,6 @@ public class Authentification extends AppCompatActivity implements View.OnClickL
             case R.id.bAuthentification:
 
                 break;
-
-            case R.id.tvInscriptionLink:
-                //Refresh
-                startActivity(new Intent(this, Inscription.class));
-                break;
-            
-            /* info à traiter
-            case R.id.tvOubliInfoLink:
-                break;
-                */
         }
     }
 }
