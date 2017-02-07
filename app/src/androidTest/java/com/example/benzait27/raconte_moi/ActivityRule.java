@@ -17,15 +17,15 @@ package com.example.benzait27.raconte_moi;
  */
 
 
-import android.app.Activity;
-import android.app.Instrumentation;
-import android.content.Intent;
-import android.support.test.InstrumentationRegistry;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.rules.TestRule;
-import org.junit.runner.Description;
-import org.junit.runners.model.Statement;
+        import android.app.Activity;
+        import android.app.Instrumentation;
+        import android.content.Intent;
+        import android.support.test.InstrumentationRegistry;
+        import org.junit.Before;
+        import org.junit.Rule;
+        import org.junit.rules.TestRule;
+        import org.junit.runner.Description;
+        import org.junit.runners.model.Statement;
 
 /**
  * A JUnit {@link Rule @Rule} which launches an activity when your test starts. Stop extending
