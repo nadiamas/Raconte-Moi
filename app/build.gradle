@@ -30,6 +30,8 @@ android {
 configurations {
     dx
 }
+
+
 dependencies {
     dx 'com.google.android.tools:dx:1.7'
     androidTestCompile('net.bytebuddy:byte-buddy-android:1.5.12') {
