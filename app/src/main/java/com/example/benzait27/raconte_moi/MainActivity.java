@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    Button bDeconnecter;
-    EditText etNom, etNbreEnfant, etNomUtilisateur;
+    EditText ettNomUtilisateur, etMotDePasse;
+    Button bConncexion;
 
 
     @Override
@@ -20,12 +20,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etNom = (EditText)findViewById(R.id.etNom);
-        etNbreEnfant = (EditText)findViewById(R.id.etNbreEnfant);
-        etNomUtilisateur = (EditText)findViewById(R.id.etNomUtilisateur);
-        bDeconnecter = (Button)findViewById(R.id.bDeconnecter);
+        ettNomUtilisateur = (EditText)findViewById(R.id.etNomUtilisateur);
+        etMotDePasse = (EditText)findViewById(R.id.etMotDePasse);
+        bConncexion = (Button)findViewById(R.id.bConnexion);
 
-        bDeconnecter.setOnClickListener(this);
+        bConncexion.setOnClickListener(this);
 
 
     }
@@ -33,7 +32,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.bDeconnecter:
+            case R.id.bConnexion:
                 startActivity(new Intent(this, Authentification.class));
                 break;
         }
