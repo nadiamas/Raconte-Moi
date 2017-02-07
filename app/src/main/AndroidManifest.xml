@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Authentification" />
+        <activity android:name=".PageAccueil" />
         <activity android:name=".Inscription"></activity>
     </application>
 
