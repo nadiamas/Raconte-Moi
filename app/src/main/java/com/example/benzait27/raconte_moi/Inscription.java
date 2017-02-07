@@ -22,7 +22,7 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
         etMail = (EditText)findViewById(R.id.etMail);
         etNomUtilisateur = (EditText)findViewById(R.id.etNomUtilisateur);
         etMotDePasse = (EditText)findViewById(R.id.etMotDePasse);
-        bInscription = (Button)findViewById(R.id.bEnregistre);
+        bInscription = (Button)findViewById(R.id.bInscription);
 
         bInscription.setOnClickListener(this);
     }
