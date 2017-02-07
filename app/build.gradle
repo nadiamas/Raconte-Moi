@@ -21,14 +21,29 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+    }
+    packagingOptions {
+        exclude 'LICENSE.txt'
     }
 }
-
+configurations {
+    dx
+}
 dependencies {
+    dx 'com.google.android.tools:dx:1.7'
+    androidTestCompile('net.bytebuddy:byte-buddy-android:1.5.12') {
+        exclude group: 'com.google.android.tools', module: 'dx'
+    }
+    androidTestCompile files("$buildDir/libs/dx.jar") { builtBy 'excludeJUnitClasses' }
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
+
     })
+
+    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     // test property config
@@ -37,6 +52,11 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+task excludeJUnitClasses(type: Jar) {
+    archiveName = 'dx.jar'
+    configurations.dx.each { from zipTree(it) }
+    exclude 'junit/**'
+}
 sonarqube {
     properties {
         //property "sonar.projectName", "PROJECT NAME"

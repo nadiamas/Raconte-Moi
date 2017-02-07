@@ -16,6 +16,10 @@ import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import java.util.UUID;
 
@@ -27,6 +31,8 @@ public class WritingDrawingManager extends AppCompatActivity implements View.OnC
     private ImageButton currPaint, drawBtn, eraseBtn, newBtn, saveBtn, opacityBtn;
     //sizes
     private float smallBrush, mediumBrush, largeBrush;
+
+
 
 
     @Override
