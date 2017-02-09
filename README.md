@@ -4,9 +4,11 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e795fe9afb88426f9c7f1f4fba2852aa)](https://www.codacy.com/app/benzait27/Raconte-Moi?utm_source=github.com&utm_medium=referral&utm_content=benzait27/Raconte-Moi&utm_campaign=badger)
 
-[![Coverage Status](https://coveralls.io/repos/github/benzait27/Raconte-Moi/badge.svg?branch=master)](https://coveralls.io/github/benzait27/Raconte-Moi?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/benzait27/Raconte-Moi/badge.svg?branch=develop)](https://coveralls.io/github/benzait27/Raconte-Moi?branch=master)
 
-[![Build Status](https://travis-ci.org/benzait27/Raconte-Moi.svg?branch=master)](https://travis-ci.org/benzait27/Raconte-Moi)
+[![Build Status](https://travis-ci.org/benzait27/Raconte-Moi.svg?branch=develop)](https://travis-ci.org/benzait27/Raconte-Moi)
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
