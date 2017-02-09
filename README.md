@@ -10,6 +10,8 @@
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+
 Raconte-moi est une super application destinée aux nos enfants entre 8 ans et 11 ans qui souhaitent améliorer leur lecture et écriture.
 Cette application présente des activités qui utilisent des outils visuels pour attirer l'attention des enfants et joindre l'outil à l'agréable. Après création d'un compte l'utilisateur pourra choisir différentes activités à savoir la lecture ou l'écriture à travers des images, des animations ou des dessins. Un système de correction sera mis en place pour la correction des fautes grammaticales et d'orthographe. Une évaluation sera mise en place avec un rapport pédagogique afin de permettre aux parents de connaître l'évolution de leurs enfants. 
 
