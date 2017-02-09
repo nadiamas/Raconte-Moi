@@ -1,5 +1,6 @@
 # Raconte-Moi
 
+version du projet
 [![GitHub version](https://badge.fury.io/gh/benzait27%2FRaconte-Moi.svg)](https://badge.fury.io/gh/benzait27%2FRaconte-Moi)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e795fe9afb88426f9c7f1f4fba2852aa)](https://www.codacy.com/app/benzait27/Raconte-Moi?utm_source=github.com&utm_medium=referral&utm_content=benzait27/Raconte-Moi&utm_campaign=badger)
